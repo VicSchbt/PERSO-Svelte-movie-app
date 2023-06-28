@@ -3,6 +3,7 @@
 
 	export let data;
 	let popular = data.popular;
+	let topRated = data.topRated;
 </script>
 
 <section>

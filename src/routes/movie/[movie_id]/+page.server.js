@@ -1,4 +1,4 @@
-
+import { API_KEY } from '../../../dev.js';
 
 export const load = async ({ fetch, params }) => {
   const res = await fetch(
