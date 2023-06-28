@@ -1,5 +1,5 @@
 <script>
-	import Card from './ui/card/Card.svelte';
+	import Card from '../Card.svelte';
 	import Icon from '@iconify/svelte';
 
 	export let movie;

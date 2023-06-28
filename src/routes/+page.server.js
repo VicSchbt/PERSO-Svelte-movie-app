@@ -14,7 +14,7 @@ export const load = async ({ fetch }) => {
 	if (resPopular.ok && resTopRated.ok) {
 		return {
 			popular: dataPopular.results,
-			topRated: dataTopRated.results,
+			topRated: dataTopRated.results.slice(0, 10),
 		};
 	}
 };
