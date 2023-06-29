@@ -11,10 +11,16 @@ export const load = async ({ fetch }) => {
 	);
 	const dataTopRated = await resTopRated.json();
 
+	const resNowPlaying = await fetch(
+		`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
+	);
+	const dataNowPlaying = await resNowPlaying.json();
+
 	if (resPopular.ok && resTopRated.ok) {
 		return {
 			popular: dataPopular.results,
 			topRated: dataTopRated.results.slice(0, 10),
+			nowPlaying: dataNowPlaying.results,
 		};
 	}
 };
